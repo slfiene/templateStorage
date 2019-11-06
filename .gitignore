@@ -3,6 +3,7 @@ Thumbs.db
 ehthumbs.db
 ehthumbs_vista.db
 
+
 # Folder config file
 Desktop.ini
 
@@ -21,3 +22,6 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+
+node_modules
+test
