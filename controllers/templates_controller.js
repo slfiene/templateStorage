@@ -1,8 +1,10 @@
 const Template = require('../models/template');
 
 module.exports = {
-    greeting(req, res) {
-        res.send({hi: 'there'});
+    index(req, res, next) {
+        Template.find()
+        .then(templates => res.status(200).send(templates))
+        .catch(next);
     },
     create(req, res, next) {
         const templateProps = req.body;
@@ -21,5 +23,12 @@ module.exports = {
         .then(() => Template.findById({_id: templateId}))
         .then(template => res.send(template))
         .catch(next);
+    },
+    delete(req, res, next) {
+        const templateId = req.params.id;
+        
+        Template.findByIdAndRemove({_id: templateId})
+            .then(template => res.status(204).send(template))
+            .catch(next);
     }
 };
