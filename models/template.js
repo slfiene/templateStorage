@@ -49,6 +49,10 @@ const TemplateSchema = new Schema({
     type: Boolean,
     default: false,
     required: true
+  },
+  dlCounter: {
+    type: Number,
+    default: 0
   }
 });
 
