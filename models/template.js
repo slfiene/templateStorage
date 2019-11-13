@@ -39,6 +39,16 @@ const TemplateSchema = new Schema({
     type: Number,
     min: 1,
     max: 5
+  },
+  workflowVersion: {
+    type: String,
+    required: false,
+    default: ''
+  }, 
+  workflow: {
+    type: Boolean,
+    default: false,
+    required: true
   }
 });
 
