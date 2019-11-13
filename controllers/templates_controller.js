@@ -32,6 +32,7 @@ module.exports = {
       .catch(next);
   },
   makeTemplate(req, res, next) {
+      // add abilty to do base64 Encoding
     const fileName = req.params.fileURL;
     console.log(fileName);
     return fileName;
