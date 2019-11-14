@@ -4,7 +4,8 @@
   "description": "Template Gallery",
   "main": "index.js",
   "scripts": {
-    "test": "SET NODE_ENV=test && nodemon --exec \"mocha --recursive -R min\" "
+    "test": "SET NODE_ENV=test && nodemon --exec \"mocha --recursive -R min\" ",
+    "start": "node index.js"
   },
   "author": "Sean L Fiene",
   "license": "ISC",
