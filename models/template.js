@@ -53,6 +53,11 @@ const TemplateSchema = new Schema({
   dlCounter: {
     type: Number,
     default: 0
+  },
+  language: {
+    type: String,
+    required: true,
+    default: 'English'
   }
 });
 
