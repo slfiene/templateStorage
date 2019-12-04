@@ -58,6 +58,10 @@ const TemplateSchema = new Schema({
     type: String,
     required: true,
     default: 'English'
+  },
+  extension: {
+    type: String,
+    required: true
   }
 });
 
