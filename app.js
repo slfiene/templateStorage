@@ -14,9 +14,9 @@ if(process.env.NODE_ENV !== 'test') {
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-     });
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//      });
 
 routes(app);
 
