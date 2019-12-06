@@ -6,7 +6,8 @@ const routes = require('./routes/routes');
 const app = express();
 
 var corsOptions = {
-    exposedHeaders: "X-Total-Count"
+    exposedHeaders: ['X-Total-Count']
+    
 }
 
 mongoose.Promise = global.Promise;
