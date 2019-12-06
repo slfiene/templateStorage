@@ -6,7 +6,7 @@ const routes = require('./routes/routes');
 const app = express();
 
 var corsOptions = {
-    exposedHeaders: ['X-Total-Count']
+    exposedHeaders: ['X-total-count']
     
 }
 
