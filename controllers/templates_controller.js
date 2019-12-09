@@ -3,7 +3,7 @@ const Template = require("../models/template");
 module.exports = {
   index(req, res, next) {
     Template.find()
-      .then(templates => res.status(200).send(templates))
+      .then(templates => res.status(200).set({"X-Total-Count" : templates.length}).send(templates))
       .catch(next);
   },
   create(req, res, next) {
