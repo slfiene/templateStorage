@@ -5,11 +5,6 @@ const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 const app = express();
 
-var corsOptions = {
-    exposedHeaders: ['X-total-count']
-    
-}
-
 mongoose.Promise = global.Promise;
 if(process.env.NODE_ENV !== 'test') {
     mongoose.connect('mongodb://templatestorage:0lgqY4f45zJbXHSryKjO1ehO2tlp7u5Ceq2zhAxCAcq5lmhkXgj8LopcsJmi7OoUC1U3WzByrkefrpc2ARKpCg==@templatestorage.mongo.cosmos.azure.com:10255/?ssl=true&appName=@templatestorage@', {useNewUrlParser: true, useUnifiedTopology: true});
@@ -17,7 +12,9 @@ if(process.env.NODE_ENV !== 'test') {
 
 
 app.use(bodyParser.json());
-app.use(cors(corsOptions));
+app.use(cors({
+    exposedHeaders: ['X-Total-Count']
+}));
 
 // app.use(function(req, res, next) {
 //     res.header("Access-Control-Allow-Origin", "*");
