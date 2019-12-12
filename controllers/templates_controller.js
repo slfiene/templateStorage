@@ -13,6 +13,12 @@ module.exports = {
       .then(template => res.send(template))
       .catch(next);
   },
+  getOne(req, res, next) {
+    const templateId = req.params.id;
+    Template.findById({_id: templateId})
+    .then(template => res.send(template))
+    .catch(next);
+  },
   edit(req, res, next) {
     // get template id to update
     const templateId = req.params.id;

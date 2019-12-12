@@ -62,6 +62,14 @@ const TemplateSchema = new Schema({
   extension: {
     type: String,
     required: true
+  }, 
+  componentWorkflow: {
+    type: Boolean,
+    default: false
+  },
+  authorName: {
+    type: String,
+    default: "Nintex"
   }
 });
 
