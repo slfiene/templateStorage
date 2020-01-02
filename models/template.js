@@ -70,6 +70,9 @@ const TemplateSchema = new Schema({
   authorName: {
     type: String,
     default: "Nintex"
+  },
+  templateContent: {
+    type: String
   }
 });
 
