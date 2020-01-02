@@ -13,7 +13,8 @@ if(process.env.NODE_ENV !== 'test') {
 
 app.use(bodyParser.json());
 app.use(cors({
-    exposedHeaders: ['X-Total-Count']
+    exposedHeaders: ['X-Total-Count'],
+    origin: "*"
 }));
 
 // app.use(function(req, res, next) {
