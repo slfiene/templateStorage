@@ -50,6 +50,10 @@ const TemplateSchema = new Schema({
     default: false,
     required: true
   },
+  nwcToken: {
+    type: String,
+    required: false
+  },
   dlCounter: {
     type: Number,
     default: 0
