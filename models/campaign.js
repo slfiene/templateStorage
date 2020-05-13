@@ -6,14 +6,6 @@ campaignName: {
     type: String,
     required: true
 },
-campaignStart: {
-    type: Date,
-    required: true
-}, 
-campaignEnd: {
-    type: Date,
-    required: true
-},
 templates: {
     type: Array,
     default: [],

@@ -1,5 +1,6 @@
 const TemplatesController = require('../controllers/templates_controller');
 const ImpsController = require('../controllers/imports_controller');
+const CampController = require('../controllers/campaign_controller');
 
 module.exports = (app) => {
     // Template based Routes
@@ -15,4 +16,11 @@ module.exports = (app) => {
     app.post('/api/imps/', ImpsController.create);
     app.put('/api/imps/:id', ImpsController.edit);
     app.delete('/api/imps/:id', ImpsController.delete);
+
+    //Campaign based Routes
+    app.get('/api/camp', CampController.index);
+    app.get('/api/camp/:id', CampController.getOne);
+    app.post('/api/camp/', CampController.create);
+    app.put('/api/camp/:id', CampController.edit);
+    app.delete('/api/camp/:id', CampController.delete);
 }

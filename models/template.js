@@ -77,6 +77,11 @@ const TemplateSchema = new Schema({
   },
   templateContent: {
     type: String
+  },
+  featured: {
+    type: Boolean,
+    required: true,
+    default: false
   }
 });
 
