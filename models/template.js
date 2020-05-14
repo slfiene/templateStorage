@@ -80,7 +80,7 @@ const TemplateSchema = new Schema({
   },
   featured: {
     type: Boolean,
-    required: true,
+    required: true, 
     default: false
   }
 });
