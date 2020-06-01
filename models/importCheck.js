@@ -13,6 +13,14 @@ const ImportSchema = new Schema({
     importDate: {
         type: String,
         required: false
+    },
+    templateName: {
+        type: String,
+        required: false
+    },
+    template_dBiD: {
+        type: String,
+        required: false
     }
 });
 
