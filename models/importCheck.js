@@ -21,6 +21,10 @@ const ImportSchema = new Schema({
     template_dBiD: {
         type: String,
         required: false
+    },
+    uploadDate: {
+        type: String,
+        required: false
     }
 });
 
