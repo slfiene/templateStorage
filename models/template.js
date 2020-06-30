@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+
 const TemplateSchema = new Schema({
   department: {
     type: String,
@@ -82,6 +83,11 @@ const TemplateSchema = new Schema({
     type: Boolean,
     required: true, 
     default: false
+  },
+  tags: {
+    type: Array,
+    default: [],
+    required: false
   }
 });
 
