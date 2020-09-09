@@ -28,7 +28,7 @@ module.exports = (app) => {
 
     //Converter based Routes
     app.get('/api/convert', ConvertController.index);
-    app.get('api/convert/:id', ConvertController.getOne);
+    app.get('/api/convert/:id', ConvertController.getOne);
     app.post('/api/convert', ConvertController.create);
     app.put('/api/convert/:id', ConvertController.edit);
 }
