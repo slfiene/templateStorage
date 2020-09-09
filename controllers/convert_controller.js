@@ -3,30 +3,30 @@ const Convert = require("../models/convert");
 module.exports = {
     index(req, res, next) {
         Convert.find()
-          .then(campaigns => res.status(200).set({"X-Total-Count" : campaigns.length}).send(campaigns))
+          .then(converts => res.status(200).set({"X-Total-Count" : converts.length}).send(converts))
           .catch(next);
       },
       create(req, res, next) {
-        const campaignProps = req.body;
+        const convertProps = req.body;
     
-        Convert.create(campaignProps)
-          .then(campaign => res.send(campaign))
+        Convert.create(convertProps)
+          .then(convert => res.send(convert))
           .catch(next);
       },
       getOne(req, res, next) {
-        const campaignId = req.params.id;
-        Convert.findById({_id: campaignId})
-        .then(campaign => res.send(campaign))
+        const convertId = req.params.id;
+        Convert.findById({_id: convertId})
+        .then(convert => res.send(convert))
         .catch(next);
       },
       edit(req, res, next) {
-        // get campaign id to update
-        const campaignId = req.params.id;
-        const campaignProps = req.body;
+        // get convert id to update
+        const convertId = req.params.id;
+        const convertProps = req.body;
     
-        Convert.findByIdAndUpdate({ _id: campaignId }, campaignProps)
-          .then(() => Convert.findById({ _id: campaignId }))
-          .then(campaign => res.send(campaign))
+        Convert.findByIdAndUpdate({ _id: convertId }, convertProps)
+          .then(() => Convert.findById({ _id: convertId }))
+          .then(convert => res.send(convert))
           .catch(next);
       },
 };
