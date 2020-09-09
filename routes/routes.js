@@ -1,6 +1,8 @@
 const TemplatesController = require('../controllers/templates_controller');
 const ImpsController = require('../controllers/imports_controller');
 const CampController = require('../controllers/campaign_controller');
+const ConvertController = require('../controllers/convert_controller');
+const Convert = require('../models/convert');
 
 module.exports = (app) => {
     // Template based Routes
@@ -23,4 +25,10 @@ module.exports = (app) => {
     app.post('/api/camp/', CampController.create);
     app.put('/api/camp/:id', CampController.edit);
     app.delete('/api/camp/:id', CampController.delete);
+
+    //Converter based Routes
+    app.get('/api/convert', ConvertController.index);
+    app.get('api/convert/:id', ConvertController.getOne);
+    app.post('/api/convert', ConvertController.create);
+    app.put('/api/convert/:id', ConvertController.edit);
 }
