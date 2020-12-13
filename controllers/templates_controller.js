@@ -35,6 +35,19 @@ module.exports = {
     Template.findByIdAndRemove({ _id: templateId })
       .then(template => res.status(204).send(template))
       .catch(next);
+  },
+  getAllOfType(req, res, next){
+    //get templates related to capability
+    const templateCapability = req.params.capability;
+    Template.find({capability: templateCapability})
+    .then(templates => res.status(200).set({"X-Total-Count": templates.length}).send(templates))
+    .catch(next);
+  },
+  getNWCWorkflows(req, res, next){
+    //get only NWC templates
+    Template.find({capability: "Workflows", workflowVersion: "nwc"})
+    .then(templates => res.status(200).set({"X-Total-Count": templates.length}).send(templates))
+    .catch(next);
   }
 
 };
