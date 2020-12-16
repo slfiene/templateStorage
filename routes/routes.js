@@ -9,7 +9,7 @@ module.exports = (app) => {
     app.get('/api/templates', TemplatesController.index);
     app.get('/api/templates/:id', TemplatesController.getOne);
     app.get('/api/:capability/', TemplatesController.getAllOfType);
-    app.get('api/wf/:workflowVersion/', TemplatesController.getWorkflowVersions);
+    app.get('api/nwc/:workflowVersion', TemplatesController.getWorkflowVersions);
     app.post('/api/templates/', TemplatesController.create);
     app.put('/api/templates/:id', TemplatesController.edit);
     app.delete('/api/templates/:id', TemplatesController.delete);
