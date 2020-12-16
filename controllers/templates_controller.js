@@ -43,10 +43,11 @@ module.exports = {
     .then(templates => res.status(200).set({"X-Total-Count": templates.length}).send(templates))
     .catch(next);
   },
-  getNWCWorkflows(req, res, next){
+  getWorkflowVersions(req, res, next){
     //get only NWC templates
+    const templateCapability = req.params.capability;
     const workflowVersion = req.params.workflowVersion;
-    Template.find({workflowVersion: workflowVersion})
+    Template.find({capability: templateCapability, workflowVersion: workflowVersion})
     .then(templates => res.status(200).set({"X-Total-Count": templates.length}).send(templates))
     .catch(next);
   }
