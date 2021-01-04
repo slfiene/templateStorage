@@ -15,7 +15,7 @@ module.exports = (app) => {
     app.delete('/api/templates/:id', TemplatesController.delete);
 
     //Template Import based Routes
-    app.get('/api/imps', ImpsController.index);
+    app.get('/api/imports/all', ImpsController.index);
     app.get('/api/imps/:id', ImpsController.getOne);
     app.post('/api/imps/', ImpsController.create);
     app.put('/api/imps/:id', ImpsController.edit);
