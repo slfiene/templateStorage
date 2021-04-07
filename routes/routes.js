@@ -36,8 +36,8 @@ module.exports = (app) => {
     app.put('/api/convert/:id', ConvertController.edit);
 
     //Partner based Routes
-    app.get('/api/partners', PartnerController.index);
-    app.get('/api/partners/:id', PartnerController.getOne);
+    app.get('/v1/api/partners', PartnerController.index);
+    app.get('/v1/api/partners/:id', PartnerController.getOne);
     app.post('/api/partners/', PartnerController.create);
     app.put('/api/partners/:id', PartnerController.edit);
     app.delete('/api/partners/:id', PartnerController.delete);
