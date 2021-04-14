@@ -35,6 +35,10 @@ const PartnerSchema = new Schema({
     smallIcon: {
         type: String,
         required: false
+    },
+    email: {
+        type: String,
+        required: true
     }
 });
 
