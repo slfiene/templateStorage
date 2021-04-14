@@ -39,6 +39,10 @@ const PartnerSchema = new Schema({
     email: {
         type: String,
         required: true
+    },
+    siteUrl: {
+        type: String,
+        required: true
     }
 });
 
